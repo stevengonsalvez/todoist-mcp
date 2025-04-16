@@ -433,8 +433,7 @@ server.tool(
     async ({ projectId }) => {
         try {
             if (projectId) {
-                // @ts-ignore - Known issue with the type definitions
-                const sections = await todoistApi.getSections({ projectId });
+                const sections = await todoistApi.getSections(projectId);
                 return { content: [{ type: "text", text: JSON.stringify({ sections }, null, 2) }] };
             } else {
                 // If no project ID is provided, just return empty array

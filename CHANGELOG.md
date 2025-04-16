@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/stevengonsalvez/todoist-mcp/compare/v1.0.0...v1.0.1) (2025-04-16)
+
+
+### Bug Fixes
+
+* updated manual release pipeline ([0145a2e](https://github.com/stevengonsalvez/todoist-mcp/commit/0145a2e4a0d2fb7b5e87f28402d12505f40fe3ef))
+
 # 1.0.0 (2025-04-16)
 
 

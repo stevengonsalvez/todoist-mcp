@@ -1,3 +1,7 @@
+# v1.0.2 (2025-04-16)
+
+Manual release: 1.0.2
+
 ## [1.0.1](https://github.com/stevengonsalvez/todoist-mcp/compare/v1.0.0...v1.0.1) (2025-04-16)
 
 

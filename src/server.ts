@@ -33,11 +33,11 @@ server.tool(
     },
     async ({ projectId, label, filter }) => {
         try {
-            const params: any = {};
-            if (projectId) params.projectId = projectId;
-            if (label) params.label = label;
-            if (filter) params.filter = filter;
-            const tasks = await todoistApi.getTasks(params);
+            const tasks = await todoistApi.getTasks({
+                projectId,
+                label,
+                filter,
+            });
             return { content: [{ type: "text", text: JSON.stringify({ tasks }, null, 2) }] };
         } catch (error) {
             console.error('Error fetching tasks:', error);
@@ -433,7 +433,8 @@ server.tool(
     async ({ projectId }) => {
         try {
             if (projectId) {
-                const sections = await todoistApi.getSections(projectId);
+                // @ts-ignore - Known issue with the type definitions
+                const sections = await todoistApi.getSections({ projectId });
                 return { content: [{ type: "text", text: JSON.stringify({ sections }, null, 2) }] };
             } else {
                 // If no project ID is provided, just return empty array

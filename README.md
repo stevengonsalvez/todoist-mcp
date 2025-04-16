@@ -32,18 +32,19 @@ If published as an npm package, you can use it directly with npx in your Claude 
 
 ```json
 {
-  "todoist": {
-    "command": "npx",
-    "args": [
-      "<your-npm-package-name>"
-    ],
-    "env": {
-      "TODOIST_API_TOKEN": "your_todoist_token"
+  "mcpServers": {
+    "todoist": {
+      "command": "npx",
+      "args": [
+        "todoist-mcp"
+      ],
+      "env": {
+        "TODOIST_API_TOKEN": "your_todoist_token"
+      }
     }
   }
 }
 ```
-- Replace `<your-npm-package-name>` with your published package name.
 - Set the `TODOIST_API_TOKEN` as shown.
 
 ### Manual Installation
@@ -69,7 +70,22 @@ If published as an npm package, you can use it directly with npx in your Claude 
    ```sh
    node dist/server.js
    ```
-6. Point your MCP client (e.g., Claude Desktop) to the built `dist/server.js` file.
+6. Configure Claude Desktop to use your local build by adding this to your config file:
+   ```json
+   {
+     "mcpServers": {
+       "todoist": {
+         "command": "node",
+         "args": [
+           "/path/to/todoist-mcp/dist/server.js"
+         ],
+         "env": {
+           "TODOIST_API_TOKEN": "your_todoist_token"
+         }
+       }
+     }
+   }
+   ```
 
 ## Usage Examples
 - **Get top priority tasks:**

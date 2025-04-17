@@ -3,6 +3,9 @@
   "version": "1.0.6",
   "description": "MCP server for Todoist API",
   "main": "dist/server.js",
+  "bin": {
+    "todoist-mcp-server": "./dist/server.js"
+  },
   "files": [
     "dist",
     "smithery.yaml"
@@ -13,6 +16,25 @@
     "start": "node dist/server.js",
     "dev": "ts-node src/server.ts"
   },
+  "homepage": "https://github.com/stevengonsalvez/todoist-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevengonsalvez/todoist-mcp.git"
+  },
+  "author": {
+    "name": "Steven Gonsalvez",
+    "url": "https://github.com/stevengonsalvez"
+  },
+  "keywords": [
+    "todoist",
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "task-management",
+    "productivity",
+    "api"
+  ],
+  "license": "MIT",
   "dependencies": {
     "@doist/todoist-api-typescript": "^2.1.2",
     "@modelcontextprotocol/sdk": "^1.9.0",

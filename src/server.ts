@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import express from 'express';
 import dotenv from 'dotenv';
 import { TodoistApi } from '@doist/todoist-api-typescript';

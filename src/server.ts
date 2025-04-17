@@ -33,11 +33,13 @@ server.tool(
     },
     async ({ projectId, label, filter }) => {
         try {
-            const tasks = await todoistApi.getTasks({
-                projectId,
-                label,
-                filter,
-            });
+            // Only include parameters that have actual values
+            const params: any = {};
+            if (projectId) params.projectId = projectId;
+            if (label) params.label = label;
+            if (filter) params.filter = filter;
+
+            const tasks = await todoistApi.getTasks(params);
             return { content: [{ type: "text", text: JSON.stringify({ tasks }, null, 2) }] };
         } catch (error) {
             console.error('Error fetching tasks:', error);

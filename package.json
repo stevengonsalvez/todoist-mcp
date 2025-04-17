@@ -3,8 +3,13 @@
   "version": "1.0.6",
   "description": "MCP server for Todoist API",
   "main": "dist/server.js",
+  "files": [
+    "dist",
+    "smithery.yaml"
+  ],
   "scripts": {
     "build": "tsc",
+    "prepublishOnly": "npm run build",
     "start": "node dist/server.js",
     "dev": "ts-node src/server.ts"
   },

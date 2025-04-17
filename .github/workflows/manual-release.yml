@@ -40,6 +40,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Verify dist folder
+        run: |
+          if [ ! -d "dist" ] || [ -z "$(ls -A dist)" ]; then
+            echo "Error: dist folder is missing or empty"
+            exit 1
+          fi
+          echo "dist folder contains:"
+          ls -la dist/
+
       - name: Configure Git
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -48,6 +57,7 @@ jobs:
       - name: Bump version
         id: version
         run: |
+          # Update package.json
           if [ "${{ github.event.inputs.version_type }}" = "custom" ]; then
             npm version ${{ github.event.inputs.custom_version }} --no-git-tag-version
             echo "new_version=${{ github.event.inputs.custom_version }}" >> $GITHUB_OUTPUT
@@ -55,6 +65,13 @@ jobs:
             NEW_VERSION=$(npm version ${{ github.event.inputs.version_type }} --no-git-tag-version)
             echo "new_version=${NEW_VERSION:1}" >> $GITHUB_OUTPUT
           fi
+          
+          # Make sure files field is in package.json
+          if ! grep -q '"files":' package.json; then
+            node -e 'const pkg = require("./package.json"); pkg.files = ["dist", "smithery.yaml"]; require("fs").writeFileSync("package.json", JSON.stringify(pkg, null, 2))'
+            echo "Added files field to package.json"
+          fi
+          
           git add package.json package-lock.json
 
       - name: Update changelog

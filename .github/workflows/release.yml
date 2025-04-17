@@ -27,11 +27,21 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Verify dist folder
+        run: |
+          if [ ! -d "dist" ] || [ -z "$(ls -A dist)" ]; then
+            echo "Error: dist folder is missing or empty"
+            exit 1
+          fi
+          echo "dist folder contains:"
+          ls -la dist/
+
       - name: Install semantic-release
         run: npm install -g semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github @semantic-release/npm
 
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          # Must be an Automation token type to bypass 2FA/OTP requirement
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release 

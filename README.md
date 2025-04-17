@@ -1,5 +1,7 @@
 # Todoist MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@stevengonsalvez/todoist-mcp)](https://smithery.ai/server/@stevengonsalvez/todoist-mcp)
+
 A Model Context Protocol (MCP) server for Todoist, enabling advanced task and project management via Claude Desktop and other MCP-compatible clients.
 
 ## Requirements

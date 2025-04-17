@@ -17,6 +17,6 @@ startCommand:
       command: 'node',
       args: ['dist/server.js'],
       env: {
-        API_KEY: config.apiKey
+        TODOIST_API_KEY: config.apiKey
       }
     })

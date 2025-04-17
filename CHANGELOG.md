@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/stevengonsalvez/todoist-mcp/compare/v1.0.2...v1.0.3) (2025-04-17)
+
+
+### Bug Fixes
+
+* smithery configuration ([1369338](https://github.com/stevengonsalvez/todoist-mcp/commit/1369338054d4e871456a4247e78a5fbdb8b42e24))
+
 # v1.0.2 (2025-04-16)
 
 Manual release: 1.0.2

@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/stevengonsalvez/todoist-mcp/compare/v1.0.4...v1.0.5) (2025-04-17)
+
+
+### Bug Fixes
+
+* updated smithery configuration ([bd18a18](https://github.com/stevengonsalvez/todoist-mcp/commit/bd18a18c624c155ea593dbd3aa945fec22247241))
+
 ## [1.0.4](https://github.com/stevengonsalvez/todoist-mcp/compare/v1.0.3...v1.0.4) (2025-04-17)
 
 

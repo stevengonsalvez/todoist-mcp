@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/stevengonsalvez/todoist-mcp/compare/v1.0.6...v1.0.7) (2025-04-17)
+
+
+### Bug Fixes
+
+* updated bin folder for package.json ([8a9d3a7](https://github.com/stevengonsalvez/todoist-mcp/commit/8a9d3a7ca1182b9f38c8f2029b4bf6705c5af166))
+
 ## [1.0.6](https://github.com/stevengonsalvez/todoist-mcp/compare/v1.0.5...v1.0.6) (2025-04-17)
 
 

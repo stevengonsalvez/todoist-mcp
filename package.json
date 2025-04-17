@@ -36,7 +36,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@doist/todoist-api-typescript": "^2.1.2",
+    "@doist/todoist-api-typescript": "^4.0.2",
     "@modelcontextprotocol/sdk": "^1.9.0",
     "@types/node-fetch": "^2.6.12",
     "dotenv": "^16.3.1",

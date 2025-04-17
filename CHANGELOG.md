@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/stevengonsalvez/todoist-mcp/compare/v1.0.3...v1.0.4) (2025-04-17)
+
+
+### Bug Fixes
+
+* badging ([b0f0d41](https://github.com/stevengonsalvez/todoist-mcp/commit/b0f0d41a0ee28cc5ad98ee969815e50f45702523))
+
 ## [1.0.3](https://github.com/stevengonsalvez/todoist-mcp/compare/v1.0.2...v1.0.3) (2025-04-17)
 
 
